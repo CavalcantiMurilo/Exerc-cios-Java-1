@@ -27,5 +27,7 @@ public class Main {
             System.out.println("A primeira letra do seu nome não é uma vogal");
     }
 
+        sc.close();
+
     }
 }
