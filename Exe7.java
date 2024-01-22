@@ -9,7 +9,10 @@ public class Main {
         System.out.println("Digite algo: ");
         String palavras = sc.nextLine();
 
-        System.out.println("O tamanho da String é: " + palavras.length());
+        palavras = palavras.trim();
+        int contagem = palavras.length();
+
+        System.out.println("O tamanho da String é: " + contagem);
         sc.close();
 
     }
