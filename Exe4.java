@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.lang.String;
 
@@ -6,16 +7,18 @@ public class Main {
 
         double numero1, numero2;
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Digite um número: ");
-        numero1 = sc.nextDouble();
-        System.out.println("Digite mais um número: ");
-        numero2 = sc.nextDouble();
+        try {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Digite um número: ");
+            numero1 = sc.nextDouble();
+            System.out.println("Digite mais um número: ");
+            numero2 = sc.nextDouble();
 
-        System.out.println("A soma desses números é: " + String.format("%.2f",(numero1 + numero2)));
-
-
-        sc.close();
-
+            System.out.println("A soma desses números é: " + String.format("%.2f", (numero1 + numero2)));
+            
+            sc.close();
+        } catch (InputMismatchException e) {
+            System.out.println("O elemento enviado não é um número!");
+        }
     }
 }
