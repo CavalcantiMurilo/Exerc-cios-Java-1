@@ -14,10 +14,12 @@ public class Main {
         System.out.println("Digite uma String: ");
         frase = sc.nextLine();
 
+        frase = frase.trim();
+
         tamanho = frase.length();
         char[] novoArray = new char[tamanho];
         arrayDeChar = frase.toCharArray();
-        
+
         for(int i = tamanho - 1; i >=0; i-- ){
 
             novoArray[j] = arrayDeChar[i];
