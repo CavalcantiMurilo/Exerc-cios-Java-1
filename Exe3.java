@@ -7,10 +7,14 @@ public class Main {
         int soma = 0 ;
         char letra = 0;
 
-        char[] vogais = {'A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e'};
+        char[] vogais = {'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'};
+
+
 
         System.out.println("Digite o seu nome: ");
         String palavra = sc.nextLine();
+
+        palavra = palavra.trim();
 
         for(int i = 0; i < vogais.length; i++) {
 
@@ -24,8 +28,8 @@ public class Main {
         if (soma == 1){
             System.out.println("A primeira letra do seu nome é uma vogal e ela é: " + letra);
         } else {
-            System.out.println("A primeira letra do seu nome não é uma vogal");
-    }
+            System.out.println("A primeira letra do seu nome não é uma vogal!");
+        }
 
         sc.close();
 
